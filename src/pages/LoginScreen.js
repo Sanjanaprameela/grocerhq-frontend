@@ -86,7 +86,7 @@ export default function LoginScreen() {
               </div>
             </Form>
             <Row className="py-3">
-              <Col>New Customer?<Link to='/register'>Register</Link> </Col>
+              <Col>New Customer?<Link to='/register' className='link-text'>Register</Link> </Col>
             </Row>
             {isLoggedIn ? <Navigate to={url} /> : <br />}
           </div>

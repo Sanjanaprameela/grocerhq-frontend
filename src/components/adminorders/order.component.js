@@ -55,21 +55,13 @@ export default class StoreOrder extends React.Component {
         return (
          <>
          <AdminHeader></AdminHeader>
-            <br />
-            <div className="mt-md-5 col-md-12 d-flex justify-content-center align-content-center flex-wrap">
-                <label htmlFor="category">Choose a Specific tag to filter:</label>
-                <select name="category" onChange={(e) => handleChange(e)}> 
-    		        <option value="all">All</option>
-    		        <option value="Completed">Completed</option>
-    		        <option value="Pending">Pending</option>
-                    <option value="Cancelled">Cancelled</option>
-   		        </select>
-            </div>
+            <br /> 
             <div className="col-md-11 d-flex-column align-content-around justify-content-around flex-wrap">
                     {this.state.orders.map(order => {
                         return <OrderRow key={order._id}
                             id={order._id}
-                            userid={order.userid}
+                            paymentMethod={order.paymentMethod}
+                            receipt={order.receipt}
                             status = {order.status}
                             items={order.items} />;
                     })}

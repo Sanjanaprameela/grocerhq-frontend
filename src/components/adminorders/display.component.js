@@ -5,7 +5,7 @@ import ItemRow from './item.component';
 import axios from 'axios';
 
 
-export default function OrderRow({ id, userid, items, status}) {
+export default function OrderRow({ id, userid, items, status, paymentMethod, receipt}) {
 
     const updateStatus = (e) => {
         console.log(id, userid, status, items);
@@ -29,8 +29,10 @@ export default function OrderRow({ id, userid, items, status}) {
                 <Form.Group className="mb-1 col-md-9"  controlId={id}>
                     <Form.Label>Order ID</Form.Label>
                     <Form.Control type="text" placeholder={id} disabled/>
-                    <Form.Label>User ID</Form.Label>
-                    <Form.Control type="text" placeholder={userid} disabled />
+                    <Form.Label>Payment Method</Form.Label>
+                    <Form.Control type="text" placeholder={paymentMethod} disabled/>
+                    <Form.Label>Receipt</Form.Label>
+                    <Form.Control type="text" placeholder={receipt} disabled />
                     <br></br>
                     <label htmlFor="status_update">Order Status:</label>
                     <select name="status_update" onChange={(e) => status = (e.target.value)}>
@@ -40,8 +42,8 @@ export default function OrderRow({ id, userid, items, status}) {
                         <option value="Cancelled">Cancelled</option>
    		            </select>
                        <div className="col-md-12 d-flex-column align-content-around justify-content-around flex-wrap product-detail-wrapper">
-                        {items.map(item => {
-                        return <ItemRow key={item._id}
+                        {items.map((item, index) => {
+                        return <ItemRow key={index}
                             id={item._id}
                             name={item.name}
                             quantity = {item.quantity}

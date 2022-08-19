@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect, useRef } from "react";
-import Header from "../Navbar/Header";
+import Header from "../components/Header/header.component";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { Rings, Circles, InfinitySpin, TailSpin } from "react-loader-spinner";

@@ -129,7 +129,7 @@ export default function RegisterScreen() {
         </Form>
         <Row className="py-3">
           <Col>
-            Have an Account ? <Link to='/Login'>Login</Link>
+            Have an Account ? <Link to='/Login' className='link-text'>Login</Link>
           </Col>
         </Row>
         { isLoggedIn ? <Navigate to="/" /> : <br/>}

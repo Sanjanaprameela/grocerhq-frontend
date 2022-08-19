@@ -22,7 +22,7 @@ export default class Cart extends Component {
     if(!isUserLoggedIn()) {
       log =  <><li className="nav-item"><a className="nav-link" href="login">Login</a></li></>
     } else {
-      log = <><li className="nav-item"><a className="nav-link" href="allorders">My Orders</a></li>
+      log = <>
               <li className="nav-item"><a className="nav-link" href="login" onClick={handleLogoutClick}>Logout</a></li>
             </>
     }
@@ -41,7 +41,7 @@ export default class Cart extends Component {
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="index.html">Home
+                <a className="nav-link" href="/">Home
                   <span className="sr-only">(current)</span>
                 </a>
               </li> 
