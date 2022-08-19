@@ -125,7 +125,7 @@ function Checkout() {
 
       var options = {
         key:
-          __DEV__ == "localhost"
+          __DEV__ == "https://grocerbackend.herokuapp.com/"
             ? "rzp_test_SaZq2c9ROy1KmS"
             : "__NOT__AVAILABLE__FOR__NOW__", //Key is generated for only test purpose
         amount: amount.toString(), // Amount is in currency subunits. Default currency is INR. Hence, 100 refers to 1.00 INR
