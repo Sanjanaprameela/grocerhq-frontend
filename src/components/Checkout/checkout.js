@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Rings, Circles, InfinitySpin, TailSpin } from "react-loader-spinner";
 import { axiosInstance } from "../../config/axios.config";
-import Header from "../Navbar/Header";
+//import Header from "../Navbar/Header";
+import Header from "../Header/header.component";
 
 function Checkout() {
   const userId = localStorage.getItem("userId") || null;
