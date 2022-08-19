@@ -1,5 +1,5 @@
 
-import Header from "../components/Header/header.component";
+import Header from "../Header/header.component";
 import React from "react";
 import {useNavigate} from 'react-router-dom'
 import axios from "axios";
