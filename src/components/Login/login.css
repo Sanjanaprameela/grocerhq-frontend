@@ -33,9 +33,7 @@
 
 
 .navbar-brand {
-    padding-top: 1vh;
     font-size: 2rem;
-    margin-top: 0 !important;
 }
 
 .error-message {
